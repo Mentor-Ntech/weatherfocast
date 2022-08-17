@@ -22,7 +22,8 @@ formEl.addEventListener('submit', function (e){
   const address = inputEl.value
 
     
-      fetch(`http://localhost:1500/weather?address=${address}`).then(response => {
+      // fetch(`http://localhost:1500/weather?address=${address}`).then(response => { // steps before we add heroku
+      fetch(`/weather?address=${address}`).then(response => {
         response.json().then(data => {
           if(data.error) {
              errorMSGEl.textContent = data.error

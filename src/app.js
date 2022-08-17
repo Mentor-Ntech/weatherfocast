@@ -10,8 +10,8 @@ const express = require('express');
 const app = express();
 app.set('view engine', 'hbs');
 
-
-const port = 1500;
+const port = process.env.PORT || 1500;
+// const port = 1500; //before we insert heroku
 
 const publicDirectory = path.join(__dirname, '../public')
 app.use(express.static(publicDirectory));
