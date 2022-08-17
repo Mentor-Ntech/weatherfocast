@@ -13,7 +13,7 @@ const visibilityEl = document.querySelector('.visibility--no')
 const flagEl = document.querySelector('.flagImg')
 const mainEl = document.querySelector('main')
 const dateEl = document.querySelector('.date')
-const errorMSGEl = document.querySelector('error-message') 
+const errorMSGEl = document.querySelector('.error-message') 
 
 
 
@@ -26,7 +26,7 @@ formEl.addEventListener('submit', function (e){
       fetch(`/weather?address=${address}`).then(response => {
         response.json().then(data => {
           if(data.error) {
-             errorMSGEl.textContent = data.error
+             errorMSGEl.classList.remove('hidden') 
             console.log(data.error.message)
            }else {
             console.log(data)

@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 3.2rem;
+    padding: 3.2rem 3.2rem 9.6rem 3.2rem;
 }
 
 header {

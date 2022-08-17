@@ -13,7 +13,7 @@ const geoCode = (address, callBackFn) => {
 
     request({url: geoCodeURL, json: true}, (error, response, body) => {
         if(error) {
-            callBackFn('Unable to find location!', undefined)
+            callBackFn('Unable to find country!', undefined)
         }else {
             callBackFn(undefined, {
                 latitude: body.coord.lat,
